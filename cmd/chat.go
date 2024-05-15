@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"tactical/chat"
 
+	"github.com/charmbracelet/glamour"
+	"github.com/charmbracelet/log"
 	"github.com/spf13/cobra"
 )
 
@@ -20,5 +22,9 @@ func init() {
 func processChat(cmd *cobra.Command, args []string) {
 	fmt.Println("Awaiting Response...")
 	response := chat.GetChatResponse(args[0])
-	fmt.Println(response)
+	out, err := glamour.Render(response, "dark")
+	if err != nil {
+		log.Fatal("Error rendering markdown output", "Error", err)
+	}
+	fmt.Println(out)
 }

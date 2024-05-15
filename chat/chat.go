@@ -15,7 +15,7 @@ var openAiUrl = "https://api.openai.com/v1/chat/completions"
 func GetChatResponse(input string) string {
 	systemPrompt := ChatMessage{
 		Role:    "system",
-		Content: "You are a helpful assistant.",
+		Content: "You are a helpful assistant. Respond in markdown only.",
 	}
 
 	userPrompt := ChatMessage{
