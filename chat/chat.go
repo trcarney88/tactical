@@ -23,7 +23,7 @@ func GetChatResponse(input string) string {
 		Content: input,
 	}
 	chatBody := ChatRequest{
-		Model: "gpt-4o",
+		Model: "gpt-4o-mini",
 		Messages: []ChatMessage{
 			userPrompt,
 			systemPrompt,

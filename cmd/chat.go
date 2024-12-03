@@ -11,8 +11,8 @@ import (
 
 var chatCmd = &cobra.Command{
 	Use:   "chat",
-	Short: "ChatGPT via a CLI interface, uses GPT-4o",
-	Long:  "This is a ChatGPT via a CLI interface, which uses the latest GPT-4o model.",
+	Short: "ChatGPT via a CLI interface, uses GPT-4o-mini",
+	Long:  "This is a ChatGPT via a CLI interface, which uses the latest GPT-4o-mini model.",
 	Run:   processChat,
 }
 
